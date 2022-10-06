@@ -129,6 +129,20 @@ console.log("\n", carsForRent);
  Create a new variable called totalCars and assign to it the total number of cars present in the carsForSale and carsForRent arrays.
 */
 
+const car7 = Object.assign({}, car1);
+const car8 = Object.assign({}, car1);
+const car9 = Object.assign({}, car1);
+car7.plate = "Plate7";
+car8.plate = "Plate8";
+car9.plate = "Plate9";
+let carsForSale = [car7, car8, car9];
+let totalCars = carsForRent.length + carsForSale.length;
+console.log(totalCars);
+
 /* EXERCISE 13
  Using a loop, print to the console all the data for each car in the carsForSale array.
 */
+
+for (let i = 0; i < carsForSale.length; i++) {
+  console.log("All cars for sale in shop: ", carsForSale[i]);
+}
